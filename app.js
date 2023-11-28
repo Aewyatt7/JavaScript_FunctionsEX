@@ -7,9 +7,9 @@ function printOdds(count) {
     //We almost dont care if they put a negative in
     //we only care, beacuse we meed to put a - sign
     // Absolute value
-const sign = count/Math.abs (count)
+const sign = count/Math.abs(count)
     if (count < 0){
-        for (let i = 0; i > count; i--) {
+        for (let i = 0; i < count; i--) {
             //if i is an odd number
           if (i % 2 != 0) {
             //Then
@@ -34,11 +34,10 @@ printOdds(40)
 // Exercise 2 Section
 //pringodd(40)
 //string interpolation
-function checkAge(userName, age) {
-    if (!userName, !age) {
-    }
+function checkAge(userName,age) {
     const olderthensixteen = `Yes! ${userName}, you can drive!`;
     const youngerthensixteen = `Sorry ${userName}, but you need to wait until you're 16.`;
+    
     const yearsUntilDrivingAge = 16- age;
 
     if (age < 16) {
@@ -49,7 +48,7 @@ function checkAge(userName, age) {
     }
 }
 
-checkAge (`Tom Holland`,11);
+checkAge ('Tom Holland',11);
 
 //Excerise 3
 //3,2)
@@ -109,7 +108,7 @@ triangleType (2,2,2);
 
 function dataPlan(usage, day, planLimit) {
   const remainingDays = 30 - day;
-  const averageUsage = Math.round((usage / day) * 1000) / 100;
+  const averageUsage = Math.round((usage / day) * 100) / 100;
   const netAverage = Math.round((planLimit / 30) * 100) / 100;
   const exceedUsage = Math.round((averageUsage * 300 * 100) / 100);
   const averageRemainingData = Math.round(((planLimit - usage) / remainingDays) * 100) / 100;
